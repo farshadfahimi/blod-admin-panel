@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container {
+  @apply mx-auto max-w-7xl px-4 sm:px-6;
+}
+
+.input {
+  @apply py-2 px-3 border rounded;
+}
+
+.btn-submit {
+  @apply py-3 px-7 rounded-md text-white bg-green-600 shadow-md hover:bg-green-800 hover:shadow-slate-500 disabled:bg-gray-400;
+}

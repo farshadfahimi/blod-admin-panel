@@ -1,0 +1,55 @@
+html,
+body {
+  height: 100%;
+  @apply overflow-x-hidden;
+}
+
+#root {
+  height: 100%;
+  @apply flex flex-col;
+
+  #sidebar,
+  #navbar {
+    @apply bg-slate-800 text-white;
+  }
+
+  #navbar {
+    @apply p-4;
+  }
+
+  .wrapper {
+    @apply flex grid grid-cols-6 gap-4 h-full;
+
+    > div {
+      @apply col-start-2 col-end-7 mr-4;
+    }
+  }
+
+  #sidebar {
+    @apply col-span-1;
+  }
+}
+
+.form-group {
+  @apply flex flex-col mb-4;
+
+  > label {
+    @apply mb-2;
+  } 
+
+  .input-control {
+    @apply px-2 py-3 border border-gray-200 rounded;
+  }
+}
+
+.btn {
+  @apply ml-auto px-7 py-2 rounded text-xs;
+}
+
+.btn-info {
+  @apply bg-cyan-600 text-white shadow-slate-500 border border-cyan-800 hover:bg-cyan-700;
+}
+
+.btn-success {
+  @apply bg-green-600 text-white shadow-slate-500 border border-green-800 hover:bg-green-700;
+}

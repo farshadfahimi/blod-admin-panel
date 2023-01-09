@@ -1,0 +1,15 @@
+#sidebar {
+  @apply overflow-hidden h-full shadow-md text-white;
+
+  ul {
+    li {
+      a {
+        @apply py-3 px-2 block hover:translate-x-2 transition;
+      }
+
+      a.router-link-exact-active {
+        @apply font-bold;
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+.toast {
+  @apply flex bg-zinc-800 text-white rounded shadow-lg w-full;
+
+  &.toast-success {
+    @apply bg-green-600;
+  }
+
+  &.toast-danger {
+    @apply bg-red-600;
+  }
+
+  &.toast-warning {
+    @apply bg-yellow-400;
+  }
+
+  &.toast-info {
+    @apply bg-cyan-400;
+  }
+
+  .toast-icon {
+    @apply py-2 px-4;
+    @apply flex flex-col items-center justify-center;
+    
+    svg {
+      width: 1rem;
+      height: 1rem;
+    }
+  }
+
+  .toast-message {
+    @apply py-2 px-4 flex-shrink grow;
+  }
+}

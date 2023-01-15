@@ -46,24 +46,26 @@
 </script>
 
 <form method="post" on:submit|preventDefault={handleSubmit}>
-  <div>
-    <label for="">title</label>
-    <input type="text" bind:value={form.title} />
-  </div>
-
-  <div>
-    <label for="">Slug</label>
-    <input type="text" bind:value={form.slug} />
-  </div>
-
-  <div>
-    <label for="">Short Description</label>
-    <input type="text" bind:value={form.shortDesc} />
+  <div class="grid grid-rows-4 gap-8">
+    <div>
+      <label for="">title</label>
+      <input type="text" class="form-input" bind:value={form.title} />
+    </div>
+  
+    <div>
+      <label for="">Slug</label>
+      <input type="text" class="form-input" bind:value={form.slug} />
+    </div>
+  
+    <div class="row-span-3">
+      <label for="">Short Description</label>
+      <input type="text" class="form-input" bind:value={form.shortDesc} />
+    </div>
   </div>
 
   <div>
     <label for="">Content</label>
-    <textarea bind:value={form.body}></textarea>
+    <textarea class="w-full form-textarea" bind:value={form.body}></textarea>
   </div>
 
   <button>{ busy ? 'Wating...' : 'Submit' }</button>

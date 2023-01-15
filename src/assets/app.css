@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
+@layer base {
+  html,
+  body {
+    @apply h-full m-0 font-sans;
+  }
+}

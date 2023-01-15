@@ -7,7 +7,9 @@
 </script>
 
 <div>
-  { #each data.posts as post, i }
-    <PostItem {post} />
-  { /each }
+  {#if data.posts}
+    { #each data.posts as post, i }
+      <PostItem {post} />
+    { /each }
+  {/if}
 </div>

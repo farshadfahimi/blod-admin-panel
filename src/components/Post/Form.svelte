@@ -1,8 +1,7 @@
 <script lang="ts">
   import { createEventDispatcher, onMount } from 'svelte'
-  import axios from '@/module/Axios'
+  import { create, update, type IPost } from '@/api/posts'
 	import Toaster from '../Toast';
-  import type { IPost } from './interface'
 
   const dispatch = createEventDispatcher()
 
@@ -25,7 +24,7 @@
     busy = true
 
     try {
-      const response = await (post ? update() : create())
+      const response = await (post !== undefined && post.id ? update(post?.id, form) : create(form))
 
       Toaster.success('Post Created')
       dispatch('submit', response.data)
@@ -34,14 +33,6 @@
     }
 
     busy = false
-  }
-
-  const create = () => {
-    return axios.post(`/posts`, form)
-  }
-
-  const update = () => {
-    return axios.put(`/posts/${post?.id}`, form)
   }
 </script>
 

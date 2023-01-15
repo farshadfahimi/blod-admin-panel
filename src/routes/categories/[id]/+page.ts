@@ -1,5 +1,5 @@
-import axios from '@/module/Axios'
-import type { PageLoad, RouteParams } from "../$types";
+import { fetchCategory } from '@/api/categories'
+import type { PageLoad } from "../$types";
 
 interface Params {
   id: string
@@ -7,7 +7,7 @@ interface Params {
 
 export const load = (async ({ params }) => {
   try {
-    const response = await axios.get(`/categories/${params.id}`)
+    const response = await fetchCategory(params.id)
     return {
       category: response.data
     }

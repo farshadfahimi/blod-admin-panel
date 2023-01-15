@@ -1,6 +1,6 @@
 <script lang="ts">
   import Category from '@/components/Category/index.svelte'
-	import type { ICategory } from '@/components/Category/interface';
+  import type { ICategory } from '@/api/categories'
   import type { PageData } from "./$types";
 
 

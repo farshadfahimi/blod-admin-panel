@@ -1,10 +1,10 @@
-import axios from '@/module/Axios'
+import { fetchPost } from '@/api/posts';
 import { redirect } from '@sveltejs/kit';
 import type { PageLoad } from "./$types";
 
 export const load = (async ({ params }) => {
   try {
-    const response = await axios.get(`/posts/${params.id}`)
+    const response = await fetchPost(params.id)
 
     return {
       post: response.data

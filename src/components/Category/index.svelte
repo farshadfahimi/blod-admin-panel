@@ -1,15 +1,14 @@
 <script lang="ts">
   import { createEventDispatcher } from 'svelte'
-  import axios from '@/module/Axios'
-	import Toaster from '../Toast';
-	import type { ICategory } from "./interface";
+  import { destroy, type ICategory } from '@/api/categories'
+  import Toaster from '../Toast';
   const dispatch = createEventDispatcher()
 
   export let category: ICategory
 
   const onDelete = async () => {
     try {
-      await axios.delete(`/categories/${category.id}`)
+      await destroy(category.id)
 
       dispatch('deleted', { category })
       Toaster.success('categoryDeleted')    

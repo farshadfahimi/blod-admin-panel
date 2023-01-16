@@ -1,4 +1,4 @@
-import axios from '@/module/Axios'
+import axios from '@/lib/Axios'
 import type { AxiosResponse } from 'axios'
 import type { ICategory } from './categories'
 

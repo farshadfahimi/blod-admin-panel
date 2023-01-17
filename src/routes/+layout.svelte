@@ -2,11 +2,11 @@
 import Toaster from '../components/Toast/index.svelte';
 import '../assets/app.css'
 import Navbar from '../components/MainNav/index.svelte'
-import { isLoggedin } from './auth/store'
+import { isLoggedIn } from '@/lib/Auth'
 </script>
 
 
-{#if $isLoggedin }
+{#if $isLoggedIn }
 
 <Navbar />
 
